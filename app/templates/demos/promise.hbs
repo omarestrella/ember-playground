@@ -1,0 +1,25 @@
+<div>
+  {{#if this.promise}}
+    <Promise @promise={{this.promise}}>
+      <:loading>
+        Loading...
+      </:loading>
+
+      <:success as |data|>
+        Got some data: {{stringify data}}
+      </:success>
+
+      <:error as |error|>
+        Got an error: {{error}}
+      </:error>
+    </Promise>
+  {{/if}}
+</div>
+<div>
+  <button {{action (fn this.makeNewPromise)}}>
+    New Success Promise
+  </button>
+  <button {{action (fn this.makeNewPromise "error")}}>
+    New Error Promise
+  </button>
+</div>

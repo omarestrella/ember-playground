@@ -1,0 +1,47 @@
+* {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+
+  background: #e9ecf3;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 10px;
+
+  border-bottom: 1px solid black;
+}
+
+.container {
+  display: flex;
+
+  nav {
+    width: 200px;
+    border-right: 1px solid black;
+
+    a {
+      display: block;
+      padding: 10px;
+
+      text-align: center;
+
+      border-bottom: 1px solid black;
+    }
+  }
+
+  section {
+    flex: 1 1 0%;
+    padding: 10px;
+  }
+}

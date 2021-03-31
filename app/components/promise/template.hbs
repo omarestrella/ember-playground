@@ -1,0 +1,11 @@
+{{#if (not @promise)}}
+  No Promise Supplied
+{{else}}
+  {{#if (eq this.state "loading")}}
+    {{yield to="loading"}}
+  {{else if (eq this.state "fulfilled")}}
+    {{yield this.data to="success"}}
+  {{else}}
+    {{yield this.error to="error"}}
+  {{/if}}
+{{/if}}
